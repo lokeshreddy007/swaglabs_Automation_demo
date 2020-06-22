@@ -15,7 +15,6 @@ end
 end
   
   Then('User should be successfully login') do
-    # find(first('.inventory_item_name').text).to eql ('Sauce Labs Backpack')
     expect(first('.inventory_item_name').text).to   eq('Sauce Labs Backpack')
 
 end
