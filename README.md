@@ -176,6 +176,11 @@ end
 ```ruby
 expect(page).to have_content("Some Content")
 expect(page).to have_no_content("Some Content")
+admin_section = find("#admin")
+expect(admin_section).not_to be_present
+expect(page).not_to have_selector("#admin")
+expect(page).to have_selector("#profile-photo")
+expect(page).not_to have_selector("#admin")
 
 # True if there is a anchor tag with text matching regex
 expect(page).to have_xpath("//a")
