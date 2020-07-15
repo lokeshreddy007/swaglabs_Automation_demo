@@ -16,7 +16,6 @@ end
   
   Then('User should be successfully login') do
     expect(first('.inventory_item_name').text).to   eq('Sauce Labs Backpack')
-
 end
   
   When('User enter wrong UserName') do
