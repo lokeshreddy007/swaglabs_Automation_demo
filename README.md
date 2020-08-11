@@ -2,7 +2,7 @@
 
 1. [Introduction](#Introduction)
 2. [CheetSheets](#CheetSheets)
-3. [Allure Report Generation](#Allure Report Generation)
+3. [AllureReportGeneration](#AllureReportGeneration)
 4. [Reference](#Reference)
 
 # Introduction
@@ -243,7 +243,7 @@ expect(page).to have_link("Foo", :href=>"googl.com")
 expect(page).to have_no_link("Foo", :href=>"google.com")
 ```
 
-# Allure Report Generation
+# AllureReportGeneration
 
 ```ruby
     # Added allure gem  in gem file
