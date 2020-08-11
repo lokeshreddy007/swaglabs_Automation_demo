@@ -242,6 +242,50 @@ expect(page).to have_link("Foo", :href=>"googl.com")
 expect(page).to have_no_link("Foo", :href=>"google.com")
 ```
 
+###### Allure Report Generation
+
+```ruby
+    # Added allure gem  in gem file
+    gem 'allure-cucumber'
+
+    # Allure configuration in env.rb file
+    AllureCucumber.configure do |c|
+      c.results_directory = 'allure-report'
+      c.clean_results_directory = true
+    end
+
+    # created a config folder to store configuration
+    default: "--format pretty --format AllureCucumber::CucumberFormatter --out allure-results"
+
+    # then run cucumber, to see the report we will use the allure command tool. 
+    # Install Allure 
+    link: https://github.com/allure-framework/allure2/issues/828
+
+```
+
+```ruby
+You can get it from here https://launchpad.net/~qameta/+archive/ubuntu/allure/+files/allure_2.4.1~xenial_all.deb
+
+You can use Gdebi to install it by double clicking it, or using dpkg as follows
+dpkg -i allure_2.4.1~xenial_all.deb
+Once you are done with dpkg, you should execute
+sudo apt-get install -f
+This will install any missing dependencies that you may have for Allure or any other package installed in your system.
+
+or
+
+Also you can simply download Allure zip (or tgz) distribution from [Bintray](https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/) or [Github](https://github.com/allure-framework/allure2/releases/download/2.7.0/allure-2.7.0.zip) and unpack it. Executables inside bin folder
+
+After installing the Allure, we can serve report by using 
+
+```
+
+```ruby
+allure serve /home/path/to/project/target/allure-reports/
+
+```
+![Allure](assets/Allure.png)
+
 # Reference
 
 1. [Hoaigiang Gist](https://gist.github.com/hoaigiang94/fa5833df039a452ff400b44b221aa50d)
